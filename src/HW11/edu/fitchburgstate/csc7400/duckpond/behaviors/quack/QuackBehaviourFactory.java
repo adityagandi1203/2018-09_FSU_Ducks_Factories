@@ -17,11 +17,11 @@ public class QuackBehaviourFactory
 	{QuackBehavior QB=null;
 		
 		
-		if(type!=null && type.equals("squeak"))
+		if(type!=null && type.equals(Qtype.SQUEAK))
 		{
 			QB=new Squeak();
 		}
-		else if(type!=null && type.equals("quack"))
+		else if(type!=null && type.equals(Qtype.QUACK))
 		{
 			QB=new DuckQuack();
 		}
