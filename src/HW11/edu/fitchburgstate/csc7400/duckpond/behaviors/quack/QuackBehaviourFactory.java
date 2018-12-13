@@ -9,11 +9,12 @@ package HW11.edu.fitchburgstate.csc7400.duckpond.behaviors.quack;
 //quack behaviour for the factory
 public class QuackBehaviourFactory 
 {
+	public Qtype type;
 	/*
 	 * @parm is  a string which has sound
 	 * @return is a instance QB
 	 */
-	public static QuackBehavior QuackBe(String type)
+	public static QuackBehavior QuackBe(Qtype type)
 	{QuackBehavior QB=null;
 		
 		
