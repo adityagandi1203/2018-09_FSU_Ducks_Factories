@@ -7,9 +7,12 @@
 
 package HW11.edu.fitchburgstate.csc7400.duckpond.ducks;
 
+import HW11.edu.fitchburgstate.csc7400.duckpond.behaviors.fly.FlyBehaviorFactory;
 import HW11.edu.fitchburgstate.csc7400.duckpond.behaviors.fly.SimpleFly;
 import HW11.edu.fitchburgstate.csc7400.duckpond.behaviors.quack.DuckQuack;
+import HW11.edu.fitchburgstate.csc7400.duckpond.behaviors.quack.QuackBehaviourFactory;
 import HW11.edu.fitchburgstate.csc7400.duckpond.behaviors.swim.SimpleSwim;
+import HW11.edu.fitchburgstate.csc7400.duckpond.behaviors.swim.SwimBehaviourFactory;
 
 /** 
  *  Redhead duck for pond
@@ -22,8 +25,8 @@ public class Redhead extends Duck {
   public Redhead() {
 		super("Redhead",
 				"redhead.bmp",
-				new SimpleFly("redhead flap"),
-				new SimpleSwim("redhead paddle"),
-				new DuckQuack());
+				  FlyBehaviorFactory.FlyBehavior("mallard flap"),
+				  SwimBehaviourFactory.swimBe("mallard paddle"),
+				  QuackBehaviourFactory.QuackBe("quack"));
   }
 }
