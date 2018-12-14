@@ -7,6 +7,7 @@
 
 package HW11.edu.fitchburgstate.csc7400.duckpond.ducks;
 
+import HW11.edu.fitchburgstate.csc7400.duckpond.behaviors.BehaviorStrategy;
 import HW11.edu.fitchburgstate.csc7400.duckpond.behaviors.fly.CannotFly;
 import HW11.edu.fitchburgstate.csc7400.duckpond.behaviors.fly.FlyBehaviorFactory;
 import HW11.edu.fitchburgstate.csc7400.duckpond.behaviors.quack.CannotQuack;
@@ -25,8 +26,6 @@ public class WoodenDecoy extends Duck {
 	public WoodenDecoy() {
 		super("Wooden Decoy",
 				"wooden_decoy.bmp",
-				  FlyBehaviorFactory.FlyBehavior(null),
-				  SwimBehaviourFactory.swimBe("decoy floating"),
-				  QuackBehaviourFactory.QuackBe(null));
+				 BehaviorStrategy.behavior(null, "decoy floating", null));
 	}
 }

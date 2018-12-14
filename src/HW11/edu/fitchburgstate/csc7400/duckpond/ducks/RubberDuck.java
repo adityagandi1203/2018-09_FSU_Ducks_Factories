@@ -7,8 +7,10 @@
 
 package HW11.edu.fitchburgstate.csc7400.duckpond.ducks;
 
+import HW11.edu.fitchburgstate.csc7400.duckpond.behaviors.BehaviorStrategy;
 import HW11.edu.fitchburgstate.csc7400.duckpond.behaviors.fly.CannotFly;
 import HW11.edu.fitchburgstate.csc7400.duckpond.behaviors.fly.FlyBehaviorFactory;
+import HW11.edu.fitchburgstate.csc7400.duckpond.behaviors.quack.Qtype;
 import HW11.edu.fitchburgstate.csc7400.duckpond.behaviors.quack.QuackBehaviourFactory;
 import HW11.edu.fitchburgstate.csc7400.duckpond.behaviors.quack.Squeak;
 import HW11.edu.fitchburgstate.csc7400.duckpond.behaviors.swim.SimpleSwim;
@@ -25,8 +27,5 @@ public class RubberDuck extends Duck {
 	public RubberDuck() {
 		super("Rubber Duck",
 				"ducky.bmp",
-				  FlyBehaviorFactory.FlyBehavior(null),
-				  SwimBehaviourFactory.swimBe("mallard paddle"),
-				  QuackBehaviourFactory.QuackBe("squeak"));
-	}
+				 BehaviorStrategy.behavior(null, "rubber duck floating", Qtype.SQUEAK));	}
 }
